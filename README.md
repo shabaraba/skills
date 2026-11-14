@@ -15,7 +15,7 @@ pnpm dlx skills add shabaraba/skills --skill <スキル名>
 | --- | --- | --- |
 | feature-dev | コードベース理解から設計、実装、レビューまでの機能開発ワークフロー | claude-plugins-official の feature-dev を改変 |
 | code-review | PR のレビュー。`--comment` で GitHub に投稿 | claude-plugins-official の code-review を転記 |
-| simplify | 変更差分の再利用・単純化・効率の改善 | 独自に作成 |
+| code-simplifier | 直近の変更コードを、動作を変えずに明快で一貫した形へ整える | claude-plugins-official の code-simplifier を改変 |
 
 ## 出典とライセンス
 
@@ -23,8 +23,7 @@ feature-dev と code-review は [anthropics/claude-plugins-official](https://git
 
 - feature-dev: プラグインのコマンドとエージェント定義を、1つのスキルと `references/` に再構成した
 - code-review: スキルの frontmatter を付けた以外は、コマンド本文と同じ
-
-simplify は Claude Code 組み込みコマンドの説明文を元に、独自に書いたものです。組み込み版とは内容が異なります。
+- code-simplifier: エージェント定義の frontmatter をスキル用に書き換えた以外は、本文と同じ
 
 ## 構成
 
