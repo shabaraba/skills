@@ -4,9 +4,39 @@ Claude Code や Command Code などで使うエージェントスキル集。
 
 ## インストール
 
+[pnpm](https://pnpm.io/) が必要です。`skills` CLI はインストールせず `pnpm dlx` で実行できます。
+
 ```bash
-pnpm dlx skills add shabaraba/skills
-pnpm dlx skills add shabaraba/skills --skill <スキル名>
+# 収録スキルの一覧を確認する
+pnpm dlx skills add shabaraba/skills --list
+
+# すべてのスキルを入れる
+pnpm dlx skills add shabaraba/skills --all
+
+# スキルを指定して入れる
+pnpm dlx skills add shabaraba/skills --skill narrative-commits
+
+# 複数指定する（--skill を繰り返す）
+pnpm dlx skills add shabaraba/skills --skill feature-dev --skill code-review
+```
+
+`--all` は `--skill '*' --agent '*' -y` と同じ意味です。プロジェクト単位ではなくユーザー全体に入れたい場合は `-g` を付けます。
+
+```bash
+pnpm dlx skills add shabaraba/skills --all -g
+```
+
+インストール後の操作は次のとおりです。
+
+```bash
+# インストール済みスキルを一覧する
+pnpm dlx skills list
+
+# 最新版に更新する
+pnpm dlx skills update
+
+# スキルを削除する
+pnpm dlx skills remove
 ```
 
 ## 収録スキル
